@@ -23,3 +23,11 @@ model Client {
   gender String
   image  String?
 }
+
+model WorkOut {
+  id          String @id @default(uuid())
+  workOutType String
+  duration    String
+  goal        String
+  note        String
+}

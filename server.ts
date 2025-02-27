@@ -1,5 +1,6 @@
 import express from 'express';
 import clientRoutes from "./routes/client-routes";
+import workoutRoutes from "./routes/workout-routes";
 
 const app = express();
 
@@ -16,7 +17,7 @@ app.use('/',(req,res,next)=>{
 
 
 app.use('/client',clientRoutes);
-
+app.use('/workout',workoutRoutes);
 app.listen('3000',()=>{
     console.log('server running in port 3000');
 });
